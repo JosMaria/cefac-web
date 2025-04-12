@@ -36,10 +36,6 @@
   flex-direction: column;
 }
 
-.inputContainer > label {
-  font-weight: 600;
-}
-
 .inputContainer > input {
   padding: 0.5rem 0.5rem;
   font-size: 1rem;
@@ -54,8 +50,6 @@
   cursor: pointer;
   border: 10px solid #277c4d;
   border-radius: 0.1rem;
-
-
 
   &:hover, &:focus {
     background-color: #2a8d55;
