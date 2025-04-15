@@ -11,14 +11,14 @@ export const Login = () => {
 				</header>
 				<form className={styles.formContainer}>
 					<div className={styles.inputContainer}>
-						<label htmlFor="username">Usuario</label>
-						<input id="username" type="text" />
+						<label htmlFor='username'>Usuario</label>
+						<input id='username' type='text' />
 					</div>
 					<div className={styles.inputContainer}>
-						<label htmlFor="username">Contrase&#241;a</label>
-						<input id="username" type="text" />
+						<label htmlFor='username'>Contrase&#241;a</label>
+						<input id='username' type='text' />
 					</div>
-					<button className={styles.button} type="submit">Iniciar Sesión</button>
+					<button className={styles.submit} type='submit'>Iniciar Sesión</button>
 				</form>
 			</div>
 		</section >
