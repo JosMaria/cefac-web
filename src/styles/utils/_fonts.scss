@@ -1,5 +1,7 @@
+$quicksand: 'QucksandRegular';
+
 @font-face {
-    font-family: 'QuicksandRegular';
+    font-family: $quicksand;
     src: url('/fonts/Quicksand-Regular.woff2') format('woff2');
     font-display: swap;
 }

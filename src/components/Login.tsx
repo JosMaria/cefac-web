@@ -6,7 +6,7 @@ export const Login = () => {
 		<section className={styles.container}>
 			<div className={styles.content}>
 				<header className={styles.header}>
-					<img src={logoUrl} alt='Logo' width={90} />
+					<img className={styles.logo} src={logoUrl} alt='Logo' />
 					<h1 className={styles.title}>Inicio de Sesión</h1>
 				</header>
 				<form className={styles.formContainer}>

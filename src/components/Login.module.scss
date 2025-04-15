@@ -1,3 +1,5 @@
+@use '../styles' as utils;
+
 .container {
     display: flex;
     justify-content: center;
@@ -8,17 +10,24 @@
         gap: 1rem;
         user-select: none;
         padding: 1rem;
-        width: 25rem;
+        width: 24rem;
 
         >.header {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0.5rem;
-
+            
+            >img.logo {
+                width: 5rem;
+            }
             >h1.title {
                 font-size: 1.8rem;
                 font-weight: bold;
+
+                @include utils.breakpoint-down(xsmall) {
+                    font-size: 1.5rem;
+                }
             }
         }
 
