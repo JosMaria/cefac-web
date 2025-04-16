@@ -1,13 +1,12 @@
-import './App.css'
-import {Login} from "./components/Login.tsx";
+import styles from './App.module.scss';
+import { LoginPage } from "./pages/Login/LoginPage.tsx";
 
 function App() {
 
     return (
-        <>
-            <div className="">maria17</div>
-            <Login/>
-        </>
+        <main className={styles.mainContent}>
+            <LoginPage/>
+        </main>
 
     )
 }
