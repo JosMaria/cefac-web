@@ -1,5 +1,37 @@
 @use '../../styles' as utils;
 
+$green: #277c4d;
+$green-hover: #2a8d55;
+$light: #e7e9ee;
+
+%button-shared {
+  font-size: 1rem;
+  padding: 0.6rem 0.7rem;
+  background-color: $green;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $green-hover;
+  }
+
+  &:focus { 
+    box-shadow:
+      0 0 0 1px $light,
+      0 0 0 3px $green; 
+  }
+
+  @include utils.breakpoint-down(xsmall) {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+
 .container {
   display: flex;
   justify-content: center;
@@ -37,9 +69,9 @@
       flex-direction: column;
       gap: 1.4rem;
       padding: 1.3rem;
-      background-color: #F8F9FA;
+      background-color: $light;
       border-radius: 0.25rem;
-      border: 0.1rem solid darkgray;
+      border: 0.12rem solid darkgray;
 
       @include utils.breakpoint-down(small) {
         padding: 1rem;
@@ -62,58 +94,22 @@
         padding: 0.5rem 0.5rem;
         font-size: 1rem;
         width: 100%;
-        border-radius: 0.2rem;
-        border: 0.1rem solid #ccc;
+        border-radius: 0.2rem;  
+        border: 0.1rem solid darkgray;
         outline: none;
 
         &:focus {
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
+
+        @include utils.breakpoint-down(xsmall) {
+          font-size: 0.9rem;
+        }
       }
 
       .submit {
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
-        background-color: #277c4d;
-        color: #F8F9FA;
-        cursor: pointer;
-        border: none;
-        border-radius: 0.2rem;
-
-        &:hover,
-        &:focus {
-          background-color: #2a8d55;
-        }
-
-        &:focus {
-          outline: none;
-          box-shadow:
-            0 0 0 1px white,
-            0 0 0 3px #277c4d;
-        }
+        @extend %button-shared;
       }
     }
-  }
-}
-
-%button-shared {
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.2rem;
-  background-color: #277c4d;
-  color: #F8F9FA;
-  
-  &:hover,
-  &:focus {
-    background-color: #2a8d55;
-  }
-
-  &:focus {
-    outline: none;
-    box-shadow:
-      0 0 0 1px white,
-      0 0 0 3px #277c4d;
   }
 }

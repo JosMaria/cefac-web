@@ -19,11 +19,11 @@ const Form = () => (
   <form className={styles.formContainer}>
     <div className={styles.inputContainer}>
       <label htmlFor='username'>Usuario</label>
-      <input id='username' type='text' />
+      <input id='username' type='text' autoComplete='off' />
     </div>
     <div className={styles.inputContainer}>
-      <label htmlFor='username'>Contrase&#241;a</label>
-      <input id='username' type='text' />
+      <label htmlFor='password'>Contrase&#241;a</label>
+      <input id='password' type='password' />
     </div>
     <button className={styles.submit} type='submit'>Iniciar Sesión</button>
   </form>
