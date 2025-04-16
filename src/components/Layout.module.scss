@@ -1,0 +1,47 @@
+$primary-color: #003366;
+$prmary-color-hover: #104d8b;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    >main {
+        flex: 1;
+    }
+}
+
+
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-color;
+    padding: 1rem;
+
+    >img {
+        width: 2.5rem;
+        background-color: white;
+        border-radius: 50%;
+
+    }
+    >svg {
+        width: 2.2rem;
+        height: 2.2rem;
+        color: white;
+        cursor: pointer;
+        border-radius: 50%;
+        
+        &:hover, &:focus {
+            background-color: $prmary-color-hover;
+        }
+    }
+}
+
+.footerContent {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: $primary-color;
+    color: white;
+}
