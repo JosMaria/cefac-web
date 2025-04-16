@@ -1,4 +1,4 @@
-@use '../styles' as utils;
+@use '../../styles' as utils;
 
 .container {
     display: flex;
@@ -17,13 +17,14 @@
             flex-direction: column;
             align-items: center;
             margin: 0.5rem;
-            
+
             >img.logo {
                 width: 5rem;
             }
+
             >h1.title {
                 font-size: 1.8rem;
-                font-weight: bold;
+                font-weight: bolder;
 
                 @include utils.breakpoint-down(xsmall) {
                     font-size: 1.5rem;
@@ -40,9 +41,21 @@
             border-radius: 0.25rem;
             border: 0.1rem solid darkgray;
 
+            @include utils.breakpoint-down(small) {
+                padding: 1rem;
+            }
+
+            @include utils.breakpoint-down(xsmall) {
+                padding: 0.8rem;
+            }
+
             >.inputContainer>label {
                 display: block;
                 padding-bottom: 0.25rem;
+
+                @include utils.breakpoint-down(xsmall) {
+                    font-size: 0.9rem;
+                }
             }
 
             >.inputContainer>input {

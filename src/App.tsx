@@ -1,11 +1,11 @@
-import {Login} from "./components/Login.tsx";
 import styles from './App.module.scss';
+import { LoginPage } from "./pages/Login/LoginPage.tsx";
 
 function App() {
 
     return (
         <main className={styles.mainContent}>
-            <Login/>
+            <LoginPage/>
         </main>
 
     )
