@@ -2,12 +2,12 @@
 	.personalContent {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 		column-gap: 2rem;
 		row-gap: 2rem;
 
 		.inputContent {
-			width: 18rem;
+			width: 16rem;
 
 			input {
 				width: 100%;

@@ -1,0 +1,42 @@
+@use '../../../../styles/utils' as utils;
+
+.activitiesContent {
+	background-color: white;
+	width: 100%;
+	
+	article {
+		margin-bottom: 0.5rem;
+	}
+
+	.tableContent {
+		overflow-x: auto;
+		
+	}
+	table {
+		border-collapse: collapse;
+		font-size: 0.8rem;
+
+		thead {
+			background-color: lightgray;
+
+			tr {
+				th {
+					padding: 0.5rem;
+					text-align: start;
+				}
+			}
+		}
+
+		tbody {
+			tr {
+				&:nth-child(even) {
+					background-color: utils.$light;
+				}
+
+				td {
+					padding: 0.4rem;
+				}
+			}
+		}
+	}
+}
