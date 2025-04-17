@@ -1,7 +1,45 @@
-h1,h2,h3 {
-    margin: 0;
+@use '../utils' as utils;
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: bolder;
+
+  @include utils.breakpoint-down(xsmall) {
+    font-size: 1.5rem;
+  }
+}
+
+label {
+  display: block;
+  padding-bottom: 0.25rem;
+
+  @include utils.breakpoint-down(xsmall) {
+    font-size: 0.9rem;
+  }
+}
+
+input {
+  padding: 0.5rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  border: 0.1rem solid darkgray;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  @include utils.breakpoint-down(xsmall) {
+    font-size: 0.9rem;
+  }
 }
 
 button {
-    font-family: inherit;
+  font-family: inherit;
 }
