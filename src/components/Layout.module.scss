@@ -1,3 +1,5 @@
+@use '../styles' as styles;
+
 $primary-color: #003366;
 $prmary-color-hover: #104d8b;
 
@@ -37,6 +39,10 @@ $prmary-color-hover: #104d8b;
             background-color: $prmary-color-hover;
         }
     }
+}
+
+main {
+    background-color: styles.$light;
 }
 
 .footerContent {

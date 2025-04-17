@@ -1,22 +1,14 @@
-.personalContainer {
-  background-color: white;
-  width: 40rem;
+.container {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
 
-  >.personalContent {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-content: flex-start;
-    column-gap: 5rem;
-    row-gap: 2rem;
-    height: 20rem;
-
-    .inputContent {
-      width: 15rem;
-
-      >input {
-        width: 100%;
-      }
-    }
-  }
+	.content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.5rem;
+		max-width: 40rem;
+		padding: 1rem;
+		background-color: white;
+	}
 }

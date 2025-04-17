@@ -9,9 +9,18 @@ h3 {
 h1 {
   font-size: 1.8rem;
   font-weight: bolder;
+  margin-bottom: 1rem;
 
   @include utils.breakpoint-down(xsmall) {
     font-size: 1.5rem;
+  }
+}
+
+h2 {
+  font-size: 1.2rem;
+
+  @include utils.breakpoint-down(xsmall) {
+    font-size: 1.1rem;
   }
 }
 
@@ -30,6 +39,7 @@ input {
   border-radius: 0.2rem;
   border: 0.1rem solid darkgray;
   outline: none;
+  background-color: utils.$light;
 
   &:focus {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
