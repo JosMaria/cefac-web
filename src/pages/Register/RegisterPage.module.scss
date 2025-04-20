@@ -12,7 +12,7 @@ $light: #e7e9ee;
   .content {
     background-color: white;
     width: 40rem;
-    padding: 1rem;
+    padding: 0.5rem;
     margin: 0.5rem;
 
     h1 {
@@ -25,11 +25,19 @@ $light: #e7e9ee;
       align-items: center;
       gap: 2rem;
 
+      @include utils.breakpoint-down(xsmall) {
+        gap: 1rem;
+      }
+
       .inputContainer {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         gap: 2rem;
+
+        @include utils.breakpoint-down(xsmall) {
+          gap: 1rem;
+        }
       }
 
       button {
