@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { useMutation } from '@tanstack/react-query';
 
 import styles from './RegisterPage.module.scss';
+import { Information } from '../../components/msg/Information';
+import { Warning } from '../../components/msg/Warning';
 
 type FormInput = {
   name: string;
@@ -48,6 +50,9 @@ export const RegisterPage = () => {
     <div className={styles.container}>
       <section className={styles.content}>
         <h1>Registro de Usuario</h1>
+        <Information msg='hola' />
+        <Warning msg='' />
+        
         <form
           className={styles.formContainer}
           onSubmit={handleSubmit(formInput => registerMutation.mutate(formInput))}
