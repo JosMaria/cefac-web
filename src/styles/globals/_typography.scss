@@ -9,7 +9,6 @@ h3 {
 h1 {
   font-size: 1.8rem;
   font-weight: bolder;
-  margin-bottom: 1rem;
 
   @include utils.breakpoint-down(xsmall) {
     font-size: 1.5rem;
@@ -52,8 +51,18 @@ input {
 
 button {
   font-family: inherit;
+  padding: 0;
 }
 
 p {
   margin: 0;
+}
+
+ul {
+  padding-left: 2rem;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 0.3rem;
 }

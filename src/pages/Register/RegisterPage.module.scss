@@ -13,7 +13,55 @@ $light: #e7e9ee;
     background-color: white;
     width: 40rem;
     padding: 0.5rem;
-    margin: 0.5rem;
+
+    .msgSection {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+
+      .iconContainer {
+        display: flex;
+        gap: 0.5rem;
+        width: fit-content;
+        padding: 0.2rem 0.5rem;
+        background-color: utils.$light;
+        border-radius: 0.4rem;
+
+        .icon {
+          border-bottom-width: 0.2rem;
+          border-bottom-style: solid;
+          border-bottom-color: transparent;
+          border-radius: 0.5rem 0.5rem 0 0;
+          padding: 0.1rem 0;
+          cursor: pointer;
+
+          &--information {
+            border-bottom-color: dodgerblue;
+
+            &:hover {
+              background-color: lightblue;
+            }
+          }
+
+          &--warning {
+            border-bottom-color: gold;
+
+            &:hover {
+              background-color: palegoldenrod;
+            }
+          }
+
+          &--danger {
+            border-bottom-color: red;
+
+            &:hover {
+              background-color: lightpink;
+            }
+          }
+        }
+      }
+    }
+
 
     h1 {
       text-align: center;
@@ -68,5 +116,44 @@ $light: #e7e9ee;
         }
       }
     }
+  }
+}
+
+.msgContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background-color: papayawhip;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 10rem;
+
+
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    svg {
+      border-radius: 50%;
+      padding: 0.2rem;
+      cursor: pointer;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+
+  p {
+    padding: 0 0.4rem;
+    font-size: 0.9rem;
   }
 }
