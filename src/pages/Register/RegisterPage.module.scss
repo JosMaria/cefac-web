@@ -19,55 +19,158 @@ $light: #e7e9ee;
       flex-direction: column;
       gap: 0.3rem;
 
-      .iconContainer {
+
+      .messageContainer {
         display: flex;
-        gap: 0.5rem;
-        width: fit-content;
-        padding: 0.2rem 0.5rem;
-        background-color: utils.$light;
-        border-radius: 0.4rem;
+        flex-direction: column;
+        gap: 1rem;
 
-        .icon {
-          border-bottom-width: 0.2rem;
-          border-bottom-style: solid;
-          border-bottom-color: transparent;
-          border-radius: 0.5rem 0.5rem 0 0;
-          padding: 0.1rem 0;
-          cursor: pointer;
+        .iconContainer {
+          display: flex;
+          gap: 0.5rem;
+          width: fit-content;
+          padding: 0.2rem 0.5rem;
+          background-color: utils.$light;
+          border-radius: 0.4rem;
 
-          &.information {
-            &.selected {
-              border-bottom-color: dodgerblue;
+          .icon {
+            border-bottom-width: 0.2rem;
+            border-bottom-style: solid;
+            border-bottom-color: transparent;
+            border-radius: 0.5rem 0.5rem 0 0;
+            padding: 0.1rem 0;
+            cursor: pointer;
+
+            &.information {
+              &.selected {
+                border-bottom-color: dodgerblue;
+              }
+
+              &:hover {
+                background-color: lightblue;
+              }
             }
 
-            &:hover {
-              background-color: lightblue;
+            &.warning {
+              &.selected {
+                border-bottom-color: gold;
+              }
+
+              &:hover {
+                background-color: palegoldenrod;
+              }
+            }
+
+            &.danger {
+              &.selected {
+                border-bottom-color: red;
+              }
+
+              &:hover {
+                background-color: lightpink;
+              }
+            }
+          }
+        }
+
+        .informationContainer {
+          padding: 0.5rem;
+          background-color: lightblue;
+          border-radius: 0.4rem;
+
+          .headerContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+            }
+
+            svg {
+              border-radius: 50%;
+              padding: 0.1rem;
+              cursor: pointer;
+
+              &:hover {
+                background-color: white;
+              }
             }
           }
 
-          &.warning {
-            &.selected {
-              border-bottom-color: gold;
+          .messageContent {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+          }
+        }
+
+        .warningContainer {
+          padding: 0.5rem;
+          background-color: moccasin;
+          border-radius: 0.4rem;
+
+
+          .headerContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
             }
 
-            &:hover {
-              background-color: palegoldenrod;
+            svg {
+              border-radius: 50%;
+              padding: 0.1rem;
+              cursor: pointer;
+
+              &:hover {
+                background-color: white;
+              }
             }
           }
 
-          &.danger {
-            &.selected {
-              border-bottom-color: red;
+          .messageContent {
+            padding: 0.5rem;
+            font-size: 0.9rem;
+          }
+        }
+
+        .dangerContainer {
+          padding: 0.5rem;
+          background-color: mistyrose;
+          border-radius: 0.4rem;
+
+          .headerContainer {
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
             }
 
-            &:hover {
-              background-color: lightpink;
+            svg {
+              border-radius: 50%;
+              padding: 0.1rem;
+              cursor: pointer;
+
+              &:hover {
+                background-color: white;
+              }
             }
+          }
+
+          .messageContent {
+            padding: 0.5rem;
+            font-size: 0.9rem;
           }
         }
       }
     }
-
 
     h1 {
       text-align: center;
@@ -138,8 +241,6 @@ $light: #e7e9ee;
     justify-content: space-between;
     align-items: flex-end;
     gap: 10rem;
-
-
 
     .title {
       display: flex;
