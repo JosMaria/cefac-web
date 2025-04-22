@@ -35,24 +35,30 @@ $light: #e7e9ee;
           padding: 0.1rem 0;
           cursor: pointer;
 
-          &--information {
-            border-bottom-color: dodgerblue;
+          &.information {
+            &.selected {
+              border-bottom-color: dodgerblue;
+            }
 
             &:hover {
               background-color: lightblue;
             }
           }
 
-          &--warning {
-            border-bottom-color: gold;
+          &.warning {
+            &.selected {
+              border-bottom-color: gold;
+            }
 
             &:hover {
               background-color: palegoldenrod;
             }
           }
 
-          &--danger {
-            border-bottom-color: red;
+          &.danger {
+            &.selected {
+              border-bottom-color: red;
+            }
 
             &:hover {
               background-color: lightpink;

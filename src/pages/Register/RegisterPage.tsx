@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import { useMutation } from '@tanstack/react-query';
 
 import styles from './RegisterPage.module.scss';
-import { Information } from '../../components/msg/Information';
 import { useState } from 'react';
 
 type FormInput = {
@@ -102,20 +101,34 @@ type MessageType = 'information' | 'warning' | 'danger' | 'none';
 const MessageSection = () => {
   const [value, setValue] = useState<MessageType>('none');
 
+  const changeValue = (newValue: MessageType) => setValue(prev => prev !== newValue ? newValue : 'none');
+
   return (
     <div className={styles.iconContainer}>
-      <svg className={`${styles.icon} ${styles[`icon--information`]}`} width='35' height='35' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' onClick={() => console.log('sdjedne')}>
+      <svg
+        className={`${styles.icon} ${styles.information} ${value === 'information' ? styles.selected : ''} `}
+        onClick={() => changeValue('information')}
+        width='35' height='35' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'
+      >
         <circle cx='12' cy='12' r='10' fill='#1E88E5' />
         <path d='M12 16V12' stroke='white' strokeWidth='2' strokeLinecap='round' />
         <circle cx='12' cy='8' r='1' fill='white' />
       </svg>
-      <svg className={`${styles.icon} ${styles[`icon--warning`]}` } width='35' height='35' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <svg
+        className={`${styles.icon} ${styles.warning} ${value === 'warning' ? styles.selected : ''}`}
+        onClick={() => changeValue('warning')}
+        width='35' height='35' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'
+      >
         <path d='M10.308 4L2.492 18C2.221 18.482 2.387 19.091 2.869 19.362C3.016 19.441 3.182 19.483 3.351 19.483H20.649C21.202 19.483 21.649 19.036 21.649 18.483C21.649 18.314 21.607 18.148 21.528 18.001L13.692 4C13.421 3.518 12.812 3.352 12.33 3.623C12.117 3.742 11.942 3.917 11.823 4.13L10.308 4Z'
           fill='#FFC107' />
         <path d='M12 16V12' stroke='#000000' strokeWidth='1.5' strokeLinecap='round' />
         <circle cx='12' cy='9' r='1' fill='#000000' />
       </svg>
-      <svg className={`${styles.icon} ${styles[`icon--danger`]}`} width='35' height='35' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+      <svg
+        className={`${styles.icon} ${styles.danger} ${value === 'danger' ? styles.selected : ''}`}
+        onClick={() => changeValue('danger')}
+        width='35' height='35' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'
+      >
         <rect x='5.757' y='5.757' width='12.485' height='12.485' rx='1' transform='rotate(45 12 12)' fill='#FF3B30' stroke='#D70015' stroke-width='1.5' />
         <path d='M12 8V12' stroke='white' stroke-width='2' stroke-linecap='round' />
         <circle cx='12' cy='15' r='1' fill='white' />
@@ -123,7 +136,6 @@ const MessageSection = () => {
     </div>
   );
 }
-
 
 const Warning = () => {
   return (
