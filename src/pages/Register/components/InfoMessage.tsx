@@ -1,4 +1,4 @@
-import styles from './InfoMessage.module.scss';
+import styles from './scss/InfoMessage.module.scss';
 
 type InfoMessageProps = {
   close: () => void;

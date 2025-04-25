@@ -1,9 +1,5 @@
 @use '../../styles/utils' as utils;
 
-$green: #277c4d;
-$green-hover: #2a8d55;
-$light: #e7e9ee;
-
 .pageContainer {
   display: flex;
   justify-content: center;
@@ -29,7 +25,7 @@ $light: #e7e9ee;
       >svg {
         cursor: pointer;
         border-radius: 50%;
-        
+
         &.invisible {
           visibility: hidden;
         }
@@ -39,88 +35,6 @@ $light: #e7e9ee;
             0 2px 4px rgba(0, 0, 0, 0.2),
             0 4px 8px rgba(0, 0, 0, 0.2);
         }
-      }
-    }
-  }
-}
-
-.formContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-
-  @include utils.breakpoint-down(xsmall) {
-    gap: 1rem;
-  }
-
-  .inputContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2rem;
-
-    @include utils.breakpoint-down(xsmall) {
-      gap: 1rem;
-    }
-  }
-
-  button {
-    font-size: 1rem;
-    padding: 0.6rem 0.7rem;
-    background-color: $green;
-    color: white;
-    cursor: pointer;
-    border: none;
-    border-radius: 0.2rem;
-    outline: none;
-    width: 8rem;
-
-    &:hover,
-    &:focus {
-      background-color: $green-hover;
-    }
-
-    &:focus {
-      box-shadow:
-        0 0 0 1px $light,
-        0 0 0 3px $green;
-    }
-
-    @include utils.breakpoint-down(xsmall) {
-      padding: 0.5rem 0.5rem;
-      font-size: 0.9rem;
-    }
-  }
-}
-
-.infoContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  background-color: lightblue;
-  border-radius: 0.3rem;
-  padding: 0.8rem;
-  font-size: 0.9rem;
-
-  .infoHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    .title {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .close {
-      border-radius: 50%;
-      padding: 0.1em;
-      cursor: pointer;
-
-      &:hover {
-        background-color: utils.$light;
       }
     }
   }
