@@ -1,19 +1,51 @@
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 
 import { useMutation } from '@tanstack/react-query';
 
 import { persistUser } from '../service';
 import styles from './scss/RegiterForm.module.scss';
 
+const notifySuccess = (message: string) => toast.success(message, {
+  style: {
+    backgroundColor: 'ivory',
+    borderRadius: '0',
+    borderLeftColor: 'green',
+    borderLeftStyle: 'solid',
+    borderLeftWidth: '0.4rem',
+    fontSize: '0.9rem',
+    marginRight: 0,
+  }
+});
+
+const notifyError = (message: string) => toast.error(message, {
+  style: {
+    backgroundColor: 'lightpink',
+    borderRadius: '0',
+    borderLeftColor: 'red',
+    borderLeftStyle: 'solid',
+    borderLeftWidth: '0.4rem',
+    fontSize: '0.9rem',
+    marginRight: 0,
+  }
+});
+
 type FormInput = RegisterPayload;
 
 export const RegisterForm = () => {
-  const { register, handleSubmit } = useForm<FormInput>();
+  const { register, handleSubmit, reset } = useForm<FormInput>();
 
   const registerMutation = useMutation<TokenResponse, Error, FormInput>({
     mutationFn: persistUser,
-    onSuccess: tokenResponse => console.log(tokenResponse),
-    onError: error => console.log(error)
+    onSuccess: tokenResponse => {
+      reset();
+      notifySuccess('Usuario registrado exitosamente.');
+      console.log(tokenResponse);
+    },
+    onError: error => {
+      notifyError('hubo un error');
+      console.log(error);
+    }
   });
 
   return (
