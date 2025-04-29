@@ -8,6 +8,5 @@ type RegisterPayload = {
   lastname: string;
   phone: number;
   alias: string;
-  username: string;
   email: string;
 };

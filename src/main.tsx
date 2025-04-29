@@ -5,6 +5,7 @@ import { createRoot } from 'react-dom/client';
 import { Toaster } from 'react-hot-toast';
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 import { MainRoutes } from './MainRoutes.tsx';
 
@@ -14,7 +15,8 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient} >
       <MainRoutes />
-      <Toaster position='top-right' reverseOrder={false} toastOptions={{ duration: 5000 }} />
+      <Toaster position='top-center' reverseOrder={false} toastOptions={{ duration: 5000 }} />
+      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   </StrictMode>,
 );

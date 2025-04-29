@@ -10,11 +10,11 @@
     gap: 1rem;
     user-select: none;
     background-color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     width: 40rem;
 
     @include utils.breakpoint-down(xsmall) {
-      padding: 0.5rem;
+      padding: 0.3rem;
     }
 
     .headerContainer {
@@ -38,8 +38,4 @@
       }
     }
   }
-}
-
-.custom-toast {
-  background-color: ivory;
 }
