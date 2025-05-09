@@ -78,6 +78,10 @@ $light: #e7e9ee;
 
       .submit {
         @extend %button-shared;
+
+        &.pending {
+          background-color: $green-hover;
+        }
       }
     }
   }
