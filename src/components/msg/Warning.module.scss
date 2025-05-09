@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    background-color: moccasin;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    p {
+        padding: 0 0.4rem;
+        font-size: 0.9rem;
+    }
+}

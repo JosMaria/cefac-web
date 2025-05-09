@@ -1,0 +1,38 @@
+@use '../../../../styles/utils' as utils;
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  background-color: lightblue;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+  font-size: 0.9rem;
+
+  @include utils.breakpoint-down(xsmall) {
+    padding: 0.4rem;
+    gap: 0.5rem;
+  }
+
+  .infoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      display: flex;                                  
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .close {
+      border-radius: 50%;
+      padding: 0.1em;
+      cursor: pointer;
+
+      &:hover {
+        background-color: utils.$light;
+      }
+    }
+  }
+}
