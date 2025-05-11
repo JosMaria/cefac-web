@@ -1,0 +1,30 @@
+@use 'breakpoints' as b;
+@use 'colors' as color;
+
+@mixin button($bg-color, $bg-color-hover) {
+    background-color: $bg-color;
+    color: color.$light;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.7rem 0.7rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.2rem;
+    outline: none;
+
+    &:hover,
+    &:focus {
+        background-color: $bg-color-hover;
+    }
+
+    &:focus {
+        box-shadow:
+            0 0 0 1px color.$light,
+            0 0 0 3px $bg-color;
+    }
+
+    @include b.breakpoint-down(xsmall) {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}

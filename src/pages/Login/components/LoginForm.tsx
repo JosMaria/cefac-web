@@ -23,18 +23,21 @@ export const LoginForm = () => {
 
   });
   return (
-    <form className={styles.formContainer} onSubmit={handleSubmit(form => mutate(form))}>
-      <div className={styles.inputContainer}>
-        <label htmlFor='username'>Usuario</label>
-        <input {...register('username')} id='username' type='text' autoComplete='off' />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor='password'>Contrase&#241;a</label>
-        <input {...register('password')} id='password' type='password' />
-      </div>
-      <button className={`${styles.submit} ${isPending ? styles.pending : ''}`} type='submit'>
-        {isPending ? 'Cargando...' : 'Iniciar Sesión'}
-      </button>
-    </form>
+    <div className={styles.container}>
+      <form className={styles.formContainer} onSubmit={handleSubmit(form => mutate(form))}>
+        <div className={styles.inputContainer}>
+          <label htmlFor='username'>Usuario</label>
+          <input {...register('username')} id='username' type='text' autoComplete='off' />
+        </div>
+        <div className={styles.inputContainer}>
+          <label htmlFor='password'>Contrase&#241;a</label>
+          <input {...register('password')} id='password' type='password' />
+        </div>
+        <button className={styles.buttonGreen} type='submit'>
+          {isPending ? 'Cargando...' : 'Iniciar Sesión'}
+        </button>
+      </form>
+    </div>
+
   );
 }
