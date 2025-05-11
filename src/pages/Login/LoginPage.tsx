@@ -1,13 +1,8 @@
-import { AxiosError } from 'axios';
-import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { useNavigate } from 'react-router';
-
-import { useMutation } from '@tanstack/react-query';
 
 import logoUrl from '../../assets/logo.svg';
-import styles from './LoginPage.module.scss';
-import { login } from './service';
+import { LoginForm } from './components/LoginForm';
+import styles from './scss/LoginPage.module.scss';
 
 export const LoginPage = () => {
   return (
@@ -17,7 +12,7 @@ export const LoginPage = () => {
           <img className={styles.logo} src={logoUrl} alt='Logo' />
           <h1 className={styles.title}>Inicio de Sesión</h1>
         </header>
-        <Form />
+        <LoginForm />
       </div>
     </section>
   );
@@ -46,43 +41,3 @@ const notifyError = (message: string) => toast.error(message, {
     marginRight: 0,
   }
 });
-
-type FormType = LoginRequest;
-
-type ErrorResponse = {
-  path: string;
-  reason: string;
-  timestamp: Date;
-};
-
-const Form = () => {
-  const { register, handleSubmit } = useForm<FormType>();
-  const navigate = useNavigate();
-
-  const { mutate, isPending } = useMutation<TokenResponse, AxiosError<ErrorResponse>, FormType>({
-    mutationFn: login,
-    onSuccess: () => {
-      navigate('/me')
-      notifySuccess('Bienvenido.');
-    },
-    onError: () => {
-      notifyError('Datos incorrectos.');
-    }
-  });
-
-  return (
-    <form className={styles.formContainer} onSubmit={handleSubmit(form => mutate(form))}>
-      <div className={styles.inputContainer}>
-        <label htmlFor='username'>Usuario</label>
-        <input {...register('username')} id='username' type='text' autoComplete='off' />
-      </div>
-      <div className={styles.inputContainer}>
-        <label htmlFor='password'>Contrase&#241;a</label>
-        <input {...register('password')} id='password' type='password' />
-      </div>
-      <button className={`${styles.submit} ${isPending ? styles.pending : ''}`} type='submit'>
-        {isPending ? 'Cargando...' : 'Iniciar Sesión'}
-      </button>
-    </form>
-  );
-}

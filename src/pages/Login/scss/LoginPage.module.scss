@@ -1,4 +1,4 @@
-@use '../../styles' as utils;
+//@use '../../styles' as utils;
 
 $green: #277c4d;
 $green-hover: #2a8d55;
@@ -25,10 +25,10 @@ $light: #e7e9ee;
       0 0 0 3px $green; 
   }
 
-  @include utils.breakpoint-down(xsmall) {
+  /*@include utils.breakpoint-down(xsmall) {
     padding: 0.5rem 0.5rem;
     font-size: 0.9rem;
-  }
+  }*/
 }
 
 
@@ -64,13 +64,13 @@ $light: #e7e9ee;
       border-radius: 0.25rem;
       border: 0.12rem solid darkgray;
 
-      @include utils.breakpoint-down(small) {
+      /*@include utils.breakpoint-down(small) {
         padding: 1rem;
       }
 
       @include utils.breakpoint-down(xsmall) {
         padding: 0.8rem;
-      }
+      }*/
 
       >.inputContainer>input {
         width: 100%;
