@@ -4,12 +4,13 @@ import { PublicLayout } from './components/Layout';
 import { RegisterPage } from './pages/Register/RegisterPage';
 import { LoginPage } from './pages/Login/LoginPage';
 import { AccountPage } from './pages/Account/AccountPage';
+import { HomePage } from './pages/Home/HomePage';
 
 export const MainRoutes = () => (
   <BrowserRouter>
     <Routes>
       <Route path='/' element={<PublicLayout />}>
-        <Route index element={<h1>Pagina donde estaran los productos de la cefac</h1>} />
+        <Route index element={<HomePage />} />
         <Route path='login' element={<LoginPage />} />
         <Route path='me' element={<AccountPage />} />
         <Route path='register' element={<RegisterPage />} />

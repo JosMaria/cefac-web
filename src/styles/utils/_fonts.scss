@@ -1,7 +1,14 @@
 $quicksand: 'QuicksandRegular';
+$rowdies: 'RowdiesRegular';
 
 @font-face {
     font-family: $quicksand;
     src: url('/fonts/Quicksand-Regular.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: $rowdies;
+    src: url('/fonts/Rowdies-Regular.woff2') format('woff2');
     font-display: swap;
 }

@@ -1,0 +1,29 @@
+@use '@styles-utils/fonts' as font;
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+
+    .infoContainer {
+        display: flex;
+        flex-direction: column;
+        width: 40rem;
+
+        h2 {
+            font-size: 2rem;
+
+            span {
+                font-family: font.$rowdies;
+                font-weight: 100;
+            }
+        }
+
+        
+
+        p {
+            text-align: justify;
+        }
+    }
+}
