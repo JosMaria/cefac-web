@@ -28,6 +28,12 @@
       "@styles-utils": [
         "src/styles/utils"
       ],
+      "@cefac/services": [
+        "src/services"
+      ],
+      "@cefac/config": [
+        "src/config"
+      ]
     },
   },
   "include": [

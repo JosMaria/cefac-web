@@ -8,6 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@styles-utils': path.resolve(__dirname, 'src/styles/utils'),
+      '@cefac/services': path.resolve(__dirname, 'src/services'),
+      '@cefac/config': path.resolve(__dirname, 'src/config'),
     },
   },
   plugins: [react()],

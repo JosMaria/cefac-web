@@ -1,4 +1,6 @@
+@use '@styles-utils/components' as component;
 @use '@styles-utils/breakpoints' as b;
+@use '@styles-utils/colors' as color;
 
 .container {
     display: flex;
@@ -22,6 +24,24 @@
 
                 @include b.breakpoint-down(xsmall) {
                     width: 4rem;
+                }
+            }
+        }
+
+        .formContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            padding: 1rem;
+
+            .formContent {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                .buttonGreen {
+                    @include component.button(color.$green, color.$green-hover);
                 }
             }
         }
