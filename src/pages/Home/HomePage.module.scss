@@ -1,29 +1,47 @@
 @use '@styles-utils/fonts' as font;
+@use '@styles-utils/colors' as color;
 
-.textContainer {
+
+.container {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+    justify-content: center;
 
-    .infoContainer {
+    .presentationContainer {
         display: flex;
         flex-direction: column;
-        width: 40rem;
-
-        h2 {
-            font-size: 2rem;
-
-            span {
-                font-family: font.$rowdies;
-                font-weight: 100;
+        gap: 4rem;
+        width: 50rem;
+    
+        .sectionContainer {
+            display: flex;
+            gap: 1rem;
+            
+            .infoContainer {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+    
+                .title {
+                    font-size: 2rem;
+    
+                    span {
+                        font-weight: lighter;
+                        font-family: font.$rowdies;
+                        color: color.$dark;
+                    }
+                }
+    
+                .text {
+                    font-size: 1.1rem;
+                    text-align: justify;
+                }
             }
-        }
-
-        
-
-        p {
-            text-align: justify;
+    
+            img {
+                width: 20rem;
+                height: 14rem;
+                border-radius: 10%;
+            }
         }
     }
 }
