@@ -1,9 +1,9 @@
 @use '@styles-utils/fonts' as font;
 @use '@styles-utils/colors' as color;
 
-
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
     .presentationContainer {
@@ -43,31 +43,5 @@
                 border-radius: 10%;
             }
         }
-    }
-}
-
-.x {
-    display: flex;
-    gap: 1rem;
-
-    .iconContainer {
-        background-color: darkslategrey;
-        color: white;
-        width: 4rem;
-        height: 4rem;
-        border-radius: 0.5rem;
-    
-        .icon {
-            padding: 0.5rem;
-        }
-    }
-
-    div {
-        p {
-            font-size: 1.5rem;
-            font-weight: 900;
-        }
-
-        .phrase {}
     }
 }
