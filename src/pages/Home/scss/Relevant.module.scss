@@ -1,0 +1,30 @@
+.x {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    width: 15rem;
+    height: fit-content;
+
+    .iconContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: darkgreen;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 10%;
+        padding: 0.7rem;
+        color: white;
+        
+    }
+
+    .title {
+        font-weight: bolder;
+        font-size: 1.3rem;
+    }
+
+    .phrase {
+        font-size: 0.8rem;
+    }
+}

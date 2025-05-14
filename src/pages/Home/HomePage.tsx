@@ -1,6 +1,7 @@
 import styles from './HomePage.module.scss';
 import img1 from '../../assets/image_1.png';
 import img2 from '../../assets/img.jpeg';
+import { Relevant } from './components/Relevant';
 
 export const HomePage = () => {
   return (
@@ -32,6 +33,9 @@ export const HomePage = () => {
           <img src={img2} alt='img_two' />
         </section>
       </div>
+
+      <Relevant />
+
     </div>
   );
 }
