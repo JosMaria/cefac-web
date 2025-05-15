@@ -1,11 +1,13 @@
-import styles from './HomePage.module.scss';
-import img1 from '../../assets/image_1.png';
-import img2 from '../../assets/img.jpeg';
 import { Features } from './components/Features';
+import { Presentation } from './components/Presentation';
+import styles from './scss/HomePage.module.scss';
 
 export const HomePage = () => {
   return (
     <div className={styles.container}>
+      <Presentation />
+      <Features />
+      {/*
       <div className={styles.presentationContainer}>
         <section className={styles.sectionContainer}>
           <article className={styles.infoContainer}>
@@ -33,7 +35,8 @@ export const HomePage = () => {
           <img src={img2} alt='img_two' />
         </section>
       </div>
-      <Features />
+      */}
+
     </div>
   );
 }

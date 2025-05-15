@@ -1,0 +1,43 @@
+@use '@styles-utils/fonts' as font;
+@use '@styles-utils/colors' as color;
+
+.title {
+    font-size: 2rem;
+
+    span {
+        font-weight: lighter;
+        font-family: font.$rowdies;
+        color: color.$dark;
+    }
+}
+
+.presentationText {
+    width: 45rem;
+    text-align: justify;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 25rem;
+    background-color: lightgray;
+    padding: 0.8rem 1.2rem;
+    border-radius: 1rem 0 1rem 0;
+
+    .subtitleContainer {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        
+        .line {
+            flex: 1;
+            height: 0.2rem;
+            background-color: black;
+        }
+    }
+
+    p {
+        text-align: justify;
+    }
+}
