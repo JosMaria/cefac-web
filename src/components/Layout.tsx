@@ -18,7 +18,7 @@ export const PublicLayout = () => (
       <Outlet />
     </main>
     <footer className={styles.footerContainer}>
-      <p className={styles.copyright}>2024 Cefac &copy;  Todos los derechos reservados.</p>
+      <p className={styles.copyright}>Copyright &copy; 2025, CEFAC. All Rights Reserved.</p>
     </footer>
   </div>
 );

@@ -55,37 +55,43 @@
 
     .footerContainer {
         background-color: color.$dark;
+        padding: 0.5rem;
 
         .copyright {
             color: white;
             text-align: center;
             font-weight: bold;
             padding: 0.5rem 0.25rem;
-            border-top: 0.1rem solid color.$light;
         }
     }
 }
 
 @include b.breakpoint-down(small) {
-    .layoutContainer .headerContainer {
-        padding: 0.7rem;
+    .layoutContainer {
+        .headerContainer {
+            padding: 0.7rem;
 
-        .logoContainer {
-            gap: 0.7rem;
+            .logoContainer {
+                gap: 0.7rem;
 
-            .logo {
-                width: 2.2rem;
-            }
+                .logo {
+                    width: 2.2rem;
+                }
 
-            .title {
-                font-size: 1.3rem;
+                .title {
+                    font-size: 1.3rem;
+                }
             }
         }
-    }
 
-    .footerContainer {
-        .copyright {
-            font-size: 0.8rem;
+        main {
+            padding: 0.5rem;
+        }
+
+        .footerContainer {
+            .copyright {
+                font-size: 0.8rem;
+            }
         }
     }
 }

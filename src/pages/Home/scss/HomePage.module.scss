@@ -1,5 +1,6 @@
 @use '@styles-utils/fonts' as font;
 @use '@styles-utils/colors' as color;
+@use '@styles-utils/breakpoints' as b;
 
 .container {
     display: flex;
@@ -10,6 +11,14 @@
         display: flex;
         flex-direction: column;
         gap: 4rem;
-        width: 65%;
+    }
+}
+
+@include b.breakpoint-down(small) {
+    .container {
+        .content {
+            gap: 2rem;
+            width: 100%;
+        }
     }
 }

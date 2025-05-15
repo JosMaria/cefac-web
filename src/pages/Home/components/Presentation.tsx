@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import img from '../../../assets/image_1.png';
 import styles from '../scss/Presentation.module.scss';
 
@@ -35,7 +36,7 @@ export const Presentation = () => {
               universitaria y al publico en general.
             </p>
           </div>
-          <button className={styles.toCatalogBtn}>Ver productos</button>
+          <Link to='login' className={styles.toCatalogBtn}>Ver productos</Link>
         </div>
         <div className={styles.imageContainer}>
           <img src={img} alt='imagen' />
