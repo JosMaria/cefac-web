@@ -1,12 +1,12 @@
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 2rem;
 
     .featureContainer {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
         width: 16rem;
 
         .iconContainer {
@@ -28,22 +28,22 @@
                 background-color: slateblue;
             }
         }
-    }
-}
 
-.infoContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
+        .infoContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
 
-    .title {
-        font-size: 1.3rem;
-        font-weight: bolder;
-    }
+            .title {
+                font-size: 1.3rem;
+                font-weight: bolder;
+            }
 
-    .phrase {
-        display: flex;
-        width: 75%;
-        font-size: 0.8rem;
+            .phrase {
+                display: flex;
+                width: 75%;
+                font-size: 0.8rem;
+            }
+        }
     }
 }
