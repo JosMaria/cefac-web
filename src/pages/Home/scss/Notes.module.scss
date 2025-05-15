@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+    
+    .note {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        width: 25rem;
+        background-color: lightgray;
+        padding: 0.8rem 1.2rem;
+        border-radius: 1rem 0 1rem 0;
+    
+        .subtitleContainer {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            
+            .line {
+                flex: 1;
+                height: 0.2rem;
+                background-color: black;
+            }
+        }
+    
+        p {
+            text-align: justify;
+        }
+    }
+}
