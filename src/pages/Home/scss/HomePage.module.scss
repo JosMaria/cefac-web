@@ -1,0 +1,24 @@
+@use '@styles-utils/fonts' as font;
+@use '@styles-utils/colors' as color;
+@use '@styles-utils/breakpoints' as b;
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+    }
+}
+
+@include b.breakpoint-down(small) {
+    .container {
+        .content {
+            gap: 2rem;
+            width: 100%;
+        }
+    }
+}

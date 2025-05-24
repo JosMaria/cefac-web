@@ -32,7 +32,7 @@ export const Activities = () => {
 								<td>192.168.1.209</td>
 								<td>July-25-2022 1:34 AM</td>
 								<td>LOGIN</td>
-								<td>Intento de inicio de Sesión exitodoestupednso adhasdasdgasfdg asdhasdgasdf adsasdasdgfy</td>
+								<td>Intento de inicio de Sesión</td>
 							</tr>
 						))}
 					</tbody>
