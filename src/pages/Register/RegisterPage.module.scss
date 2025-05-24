@@ -1,0 +1,41 @@
+@use '../../styles/utils' as utils;
+
+.pageContainer {
+  display: flex;
+  justify-content: center;
+
+  .sectionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    user-select: none;
+    background-color: white;
+    padding: 0.5rem;
+    width: 40rem;
+
+    @include utils.breakpoint-down(xsmall) {
+      padding: 0.3rem;
+    }
+
+    .headerContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      >svg {
+        cursor: pointer;
+        border-radius: 50%;
+
+        &.invisible {
+          visibility: hidden;
+        }
+
+        &:hover {
+          box-shadow:
+            0 2px 4px rgba(0, 0, 0, 0.2),
+            0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+}

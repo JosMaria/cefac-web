@@ -1,3 +1,73 @@
-h1,h2,h3 {
-    margin: 0;
+@use '@styles-utils/breakpoints' as b;
+@use '@styles-utils/colors' as color;
+
+h1, h2, h3 {
+    margin-bottom: 0.3rem;
+    font-weight: bolder;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 1.1rem;
+}
+
+label {
+    display: block;
+    padding-bottom: 0.25rem;
+}
+
+input {
+    padding: 0.5rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid darkgray;
+    outline: none;
+    background-color: color.$light;
+    width: 17rem;
+
+    &:focus {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+}
+
+button {
+    font-family: inherit;
+}
+
+
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.3rem;
+}
+
+a {
+    text-decoration-line: none;
+}
+
+@include b.breakpoint-down(xsmall) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input {
+        font-size: 0.9rem;
+    }
 }

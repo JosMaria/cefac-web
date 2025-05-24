@@ -1,0 +1,19 @@
+@use '../../styles/utils' as utils;
+
+.container {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		row-gap: 3rem;
+		width: 100%;
+		max-width: 45rem;
+		padding: 1rem;
+		background-color: white;
+
+		
+	}
+}

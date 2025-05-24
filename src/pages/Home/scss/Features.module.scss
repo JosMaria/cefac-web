@@ -1,0 +1,64 @@
+@use '@styles-utils/breakpoints' as b;
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .featureContainer {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 16rem;
+
+        .iconContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15%;
+            padding: 0.7rem;
+
+            &.timeColor {
+                background-color: darkgreen;
+            }
+
+            &.peopleColor {
+                background-color: purple;
+            }
+
+            &.productColor {
+                background-color: slateblue;
+            }
+        }
+
+        .infoContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 0.1rem;
+
+            .title {
+                font-size: 1.3rem;
+                font-weight: bolder;
+            }
+
+            .phrase {
+                display: flex;
+                width: 75%;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@include b.breakpoint-down(small) {
+    .container {
+        .featureContainer {
+            .infoContainer {
+                .title {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}
