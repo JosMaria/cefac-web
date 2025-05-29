@@ -36,7 +36,7 @@ export const Presentation = () => {
               universitaria y al publico en general.
             </p>
           </div>
-          <Link to='login' className={styles.toCatalogBtn}>Ver productos</Link>
+          <Link to='catalog' className={styles.toCatalogBtn}>Ver productos</Link>
         </div>
         <div className={styles.imageContainer}>
           <img src={img} alt='imagen' />

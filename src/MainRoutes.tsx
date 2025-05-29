@@ -11,6 +11,7 @@ export const MainRoutes = () => (
     <Routes>
       <Route path='/' element={<PublicLayout />}>
         <Route index element={<HomePage />} />
+        <Route path='catalog' element={<h1>Here is catalog</h1>} />
         <Route path='login' element={<LoginPage />} />
         <Route path='me' element={<AccountPage />} />
         <Route path='register' element={<RegisterPage />} />
