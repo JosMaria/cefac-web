@@ -1,6 +1,8 @@
 import { Link } from 'react-router';
-
+import bioCleanImg from '../../assets/bioclean.png';
+import cremImg from '../../assets/crem.png';
 import styles from './scss/CatalogPage.module.scss';
+import { url } from 'node:inspector';
 
 type CatalogType = {
   id: string;
@@ -16,14 +18,14 @@ const PRODUCTS: CatalogType[] = [
     name: 'ILUMINATE',
     tag: 'Crema Antiarrugas',
     price: 40,
-    imageUrl: 'https://media.gettyimages.com/id/173616090/es/foto/frascos-de-cosm%C3%A9ticos.jpg?s=612x612&w=0&k=20&c=fJ3YbFzLhef_WwEfF2MQG67LSvkeKow9poe3PZglVb4='
+    imageUrl: cremImg
   },
   {
     id: '2',
     name: 'BIOCLEAN',
     tag: 'Lavajillas',
     price: 15,
-    imageUrl: 'https://cdn.create.vista.com/api/media/small/209552570/stock-photo-close-view-arranged-skin-care-creams-fruits-palm-leaf-beige'
+    imageUrl: bioCleanImg
   }
 ];
 
@@ -44,10 +46,14 @@ export const CatalogPage = () => {
         <section className={styles.productList}>
           {PRODUCTS.map(product =>
             <Link className={styles.cardContainer} to='login' key={product.name}>
-              <img className={styles.image} src={product.imageUrl} alt={product.name} width={300} />
-              <h4>{product.tag}</h4>
-              <p>{product.name}</p>
-              <i className={styles.price}>Bs {product.price}</i>
+              <div className={styles.imageContainer}>
+                <img className={styles.image} src={product.imageUrl} alt={product.name} />
+              </div>
+              <div className={styles.infoContainer}>
+                <h3 className={styles.tag}>{product.tag}</h3>
+                <i>{product.name}</i>
+                <p className={styles.price}>Bs {product.price}</p>
+              </div>
             </Link>
           )
           }
