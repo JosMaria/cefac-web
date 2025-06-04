@@ -1,0 +1,28 @@
+@use '@styles-utils/breakpoints' as b;
+
+.emptyListContainer {
+    background-color: white;
+    padding: 1rem;
+    width: 30rem;
+
+    @include b.breakpoint-down(small) {
+        padding: 0.7rem;
+    }
+
+    .message {
+        text-align: justify;
+    }
+
+    .link {
+        font-weight: bold;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: inherit;
+            opacity: 0.5;
+        }
+    }
+}
