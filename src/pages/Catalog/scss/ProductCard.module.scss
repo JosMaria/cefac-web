@@ -40,3 +40,56 @@
         }
     }
 }
+
+@include b.breakpoint-up(small) {
+    .cardContainer {
+        width: 12rem;
+        
+        .imageContainer {
+            height: 10rem;
+        }
+    }
+}
+
+@include b.breakpoint-up(medium) {
+    .cardContainer {
+        width: 15rem;
+        font-size: medium;
+
+        .imageContainer {
+            height: 12rem;
+        }
+    }
+}
+
+@include b.breakpoint-up(large) {
+    .cardContainer {
+        width: 18rem;
+        font-size: large;
+        padding: 0.7rem;
+        
+        .imageContainer {
+            height: 14rem;
+        }
+    }
+}
+
+@include b.breakpoint-up(xlarge) {
+    .cardContainer {
+        width: 20rem;
+        
+        .imageContainer {
+            height: 15rem;
+        }
+    }
+}
+
+@include b.breakpoint-up('2xlarge') {
+    .cardContainer {
+        width: 22rem;
+        
+        .imageContainer {
+            height: 16rem;
+        }
+    }
+}

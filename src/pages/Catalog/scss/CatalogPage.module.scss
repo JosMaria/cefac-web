@@ -13,10 +13,27 @@
     }
 }
 
-@include b.breakpoint-up(xsmall) {
+@include b.breakpoint-up(small) {
+    .container {
+        .productList {
+            gap: 1rem;
+        }
+    }
+}
+
+@include b.breakpoint-up(medium) {
+    .container {
+        .productList {
+            gap: 2rem;
+        }
+    }
+}
+
+@include b.breakpoint-up(large) {
     .container {
         .productList {
             gap: 3rem;
         }
     }
 }
+

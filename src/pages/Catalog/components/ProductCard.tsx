@@ -18,7 +18,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ name, tag, price, imag
     <div className={styles.infoContainer}>
       <p className={styles.tag}>{tag}</p>
       <p>{name}</p>
-      <p className={styles.price}>Bs {price}</p>
     </div>
   </Link>
 );
