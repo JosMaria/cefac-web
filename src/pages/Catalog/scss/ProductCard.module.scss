@@ -1,95 +1,94 @@
-@use '@styles-utils/colors' as color;
 @use '@styles-utils/breakpoints' as b;
+@use '@styles-utils/colors' as color;
 
 .cardContainer {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: white;
-    padding: 0.3rem;
-    width: 9rem;
-    font-size: small;
+    color: black;
+    width: 18.75rem;
+    padding: 0.75rem;
 
     .imageContainer {
         display: flex;
         width: 100%;
-        height: 8rem;
+        height: 17rem;
         margin-bottom: 0.5rem;
 
         .image {
             width: 100%;
+            border-radius: 4%;
         }
     }
 
     .infoContainer {
         display: flex;
         flex-direction: column;
-        color: black;
-        margin: 0 0.2rem;
+        font-size: small;
+        white-space: nowrap;
+        overflow-x: auto;
 
         .tag {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-weight: bolder;
-        }
-
-        .price {
-            align-self: flex-end;
-            color: color.$dark;
-            font-weight: bolder;
+            font-weight: bold;
+            font-size: medium;
         }
     }
-}
 
-@include b.breakpoint-up(small) {
-    .cardContainer {
-        width: 12rem;
-        
-        .imageContainer {
-            height: 10rem;
-        }
-    }
-}
-
-@include b.breakpoint-up(medium) {
-    .cardContainer {
-        width: 15rem;
+    .price {
+        align-self: flex-end;
+        font-weight: bolder;
         font-size: medium;
-
-        .imageContainer {
-            height: 12rem;
-        }
     }
 }
 
-@include b.breakpoint-up(large) {
+@include b.breakpoint-down(large) {
     .cardContainer {
-        width: 18rem;
-        font-size: large;
-        padding: 0.7rem;
-        
-        .imageContainer {
-            height: 14rem;
-        }
-    }
-}
+        width: 16.75rem;
 
-@include b.breakpoint-up(xlarge) {
-    .cardContainer {
-        width: 20rem;
-        
         .imageContainer {
             height: 15rem;
         }
     }
 }
 
-@include b.breakpoint-up('2xlarge') {
+@include b.breakpoint-down(medium) {
     .cardContainer {
-        width: 22rem;
-        
+        width: 14.75rem;
+
         .imageContainer {
-            height: 16rem;
+            height: 13rem;
+        }
+    }
+}
+
+@include b.breakpoint-down(small) {
+    .cardContainer {
+        width: 12.5rem;
+        padding: 0.5rem;
+
+        .imageContainer {
+            height: 11rem;
+        }
+
+        .infoContainer {
+            .tag {
+                font-size: small;
+            }
+        }
+
+        .price {
+            font-size: small;
+        }
+    }
+}
+
+@include b.breakpoint-down(xsmall) {
+    .cardContainer {
+        width: 9.25rem;
+
+        .imageContainer {
+            height: 8.25rem;
         }
     }
 }

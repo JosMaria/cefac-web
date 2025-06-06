@@ -1,0 +1,15 @@
+@use '@styles-utils/breakpoints' as b;
+
+.productsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    width: 80rem;
+}
+
+@include b.breakpoint-up(small) {
+    .productsContainer {
+        gap: 1rem;
+    }
+}

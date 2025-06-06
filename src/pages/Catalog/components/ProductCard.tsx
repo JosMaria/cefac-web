@@ -10,14 +10,16 @@ type ProductCardProps = {
   imageUrl: string;
 };
 
-export const ProductCard: React.FC<ProductCardProps> = ({ name, tag, price, imageUrl }) => (
+export const ProductCard: React.FC<ProductCardProps> = ({ name, tag, imageUrl, price }) => (
   <Link className={styles.cardContainer} to='login'>
     <div className={styles.imageContainer}>
       <img className={styles.image} src={imageUrl} alt={name} />
     </div>
     <div className={styles.infoContainer}>
       <p className={styles.tag}>{tag}</p>
-      <p>{name}</p>
+      <p className={styles.name}>{name}</p>
+      <p className={styles.unitOfMeasurement}>Gramos: 4-20</p>
     </div>
+    <p className={styles.price}>Bs {price} - 20</p>
   </Link>
 );

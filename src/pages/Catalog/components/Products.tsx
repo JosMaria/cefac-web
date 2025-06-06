@@ -1,21 +1,20 @@
-import one from '../../assets/1.png';
-import two from '../../assets/2.png';
-import three from '../../assets/3.png';
-import four from '../../assets/4.png';
-import five from '../../assets/5.png';
-import six from '../../assets/6.png';
-import seven from '../../assets/7.png';
-import eight from '../../assets/8.png';
-import nine from '../../assets/9.png';
-import ten from '../../assets/10.png';
-import eleven from '../../assets/11.png';
-import twelve from '../../assets/12.png';
-import thirteen from '../../assets/13.png';
-import fourteen from '../../assets/14.png';
+import one from '../../../assets/1.png';
+import two from '../../../assets/2.png';
+import three from '../../../assets/3.png';
+import four from '../../../assets/4.png';
+import five from '../../../assets/5.png';
+import six from '../../../assets/6.png';
+import seven from '../../../assets/7.png';
+import eight from '../../../assets/8.png';
+import nine from '../../../assets/9.png';
+import ten from '../../../assets/10.png';
+import eleven from '../../../assets/11.png';
+import twelve from '../../../assets/12.png';
+import thirteen from '../../../assets/13.png';
+import fourteen from '../../../assets/14.png';
 
-import styles from './scss/CatalogPage.module.scss';
-import { EmptyList } from './components/EmptyList';
-import { Products } from './components/Products';
+import styles from '../scss/Products.module.scss';
+import { ProductCard } from './ProductCard';
 
 type CatalogType = {
   id: string;
@@ -126,10 +125,19 @@ const PRODUCTS: CatalogType[] = [
   },
 ];
 
-export const CatalogPage = () => {
+export const Products = () => {
   return (
-    <div className={styles.container}>
-      {PRODUCTS.length === 0 ? <EmptyList /> : <Products />}
-    </div>
+      <section className={styles.productsContainer}>
+          {PRODUCTS.map(product =>
+            <ProductCard
+              key={product.id}
+              id={product.id}
+              name={product.name}
+              tag={product.tag}
+              price={product.price}
+              imageUrl={product.imageUrl}
+            />
+          )}
+        </section>
   );
 }
