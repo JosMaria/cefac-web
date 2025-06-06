@@ -127,17 +127,32 @@ const PRODUCTS: CatalogType[] = [
 
 export const Products = () => {
   return (
-      <section className={styles.productsContainer}>
-          {PRODUCTS.map(product =>
-            <ProductCard
-              key={product.id}
-              id={product.id}
-              name={product.name}
-              tag={product.tag}
-              price={product.price}
-              imageUrl={product.imageUrl}
-            />
-          )}
-        </section>
+    <section className={styles.productsContainer}>
+      <FilterIcon />
+      {PRODUCTS.map(product =>
+        <ProductCard
+          key={product.id}
+          id={product.id}
+          name={product.name}
+          tag={product.tag}
+          price={product.price}
+          imageUrl={product.imageUrl}
+        />
+      )}
+    </section>
   );
 }
+
+
+export const FilterIcon = ({ size = 24, color = 'currentColor', ...props }) => (
+  <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    viewBox="0 0 24 24" 
+    width={size} 
+    height={size} 
+    fill={color}
+    {...props}
+  >
+    <path xmlns="http://www.w3.org/2000/svg" fill="currentColor" d="M9 5a1 1 0 1 0 0 2a1 1 0 0 0 0-2zM6.17 5a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 0 1 0-2h1.17zM15 11a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-1.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h7.17zM9 17a1 1 0 1 0 0 2a1 1 0 0 0 0-2zm-2.83 0a3.001 3.001 0 0 1 5.66 0H19a1 1 0 1 1 0 2h-7.17a3.001 3.001 0 0 1-5.66 0H5a1 1 0 1 1 0-2h1.17z"/>
+  </svg>
+);
