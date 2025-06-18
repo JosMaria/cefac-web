@@ -128,7 +128,6 @@ const PRODUCTS: CatalogType[] = [
 export const Products = () => {
   return (
     <section className={styles.productsContainer}>
-      <FilterIcon />
       {PRODUCTS.map(product =>
         <ProductCard
           key={product.id}
